@@ -1,0 +1,80 @@
+[debug] [2024-05-08T21:52:30.264Z] ----------------------------------------------------------------------
+[debug] [2024-05-08T21:52:30.267Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-05-08T21:52:30.268Z] CLI Version:   13.8.1
+[debug] [2024-05-08T21:52:30.268Z] Platform:      linux
+[debug] [2024-05-08T21:52:30.268Z] Node Version:  v18.13.0
+[debug] [2024-05-08T21:52:30.269Z] Time:          Thu May 09 2024 00:52:30 GMT+0300 (East Africa Time)
+[debug] [2024-05-08T21:52:30.269Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-08T21:52:30.359Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-08T21:52:30.359Z] > authorizing via signed-in user (ezianapalmhotel@gmail.com)
+[debug] [2024-05-08T21:52:30.360Z] [iam] checking project baleke-foundation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-08T21:52:30.363Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/baleke-foundation:testIamPermissions [none]
+[debug] [2024-05-08T21:52:30.363Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/baleke-foundation:testIamPermissions x-goog-quota-user=projects/baleke-foundation
+[debug] [2024-05-08T21:52:30.363Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/baleke-foundation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-08T21:52:32.651Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/baleke-foundation:testIamPermissions 200
+[debug] [2024-05-08T21:52:32.652Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/baleke-foundation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-08T21:52:32.654Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/baleke-foundation [none]
+[debug] [2024-05-08T21:52:33.460Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/baleke-foundation 200
+[debug] [2024-05-08T21:52:33.461Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/baleke-foundation {"projectId":"baleke-foundation","projectNumber":"769013302825","displayName":"baleke-foundation","name":"projects/baleke-foundation","resources":{"hostingSite":"baleke-foundation"},"state":"ACTIVE","etag":"1_caf024a0-504d-4a26-902b-a694465e5e98"}
+[info] 
+[info] === Deploying to 'baleke-foundation'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-08T21:52:33.469Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/baleke-foundation/versions [none]
+[debug] [2024-05-08T21:52:33.469Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/baleke-foundation/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-08T21:52:35.610Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/baleke-foundation/versions 200
+[debug] [2024-05-08T21:52:35.611Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/baleke-foundation/versions {"name":"projects/769013302825/sites/baleke-foundation/versions/1b7ea82802b7c6c4","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[baleke-foundation]: beginning deploy... 
+[info] i  hosting[baleke-foundation]: found 26 files in build 
+[debug] [2024-05-08T21:52:35.624Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-08T21:52:36.096Z] [hosting] hash cache [YnVpbGQ] stored for 26 files
+[debug] [2024-05-08T21:52:36.097Z] [hosting][hash queue][FINAL] {"max":462,"min":21,"avg":79.5,"active":0,"complete":26,"success":26,"errored":0,"retried":0,"total":26,"elapsed":469}
+[debug] [2024-05-08T21:52:36.097Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/769013302825/sites/baleke-foundation/versions/1b7ea82802b7c6c4:populateFiles [none]
+[debug] [2024-05-08T21:52:36.097Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/769013302825/sites/baleke-foundation/versions/1b7ea82802b7c6c4:populateFiles {"files":{"/asset-manifest.json":"baa7b0d57ebe65eeecb9dbd622490275081dc7686672b3138f8a396453baf83d","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/index.html":"787714f595a3c586560aeb4bdbec645e13a6f27fee8ae1950ae78ca5afab5e14","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/static/js/453.13c722ab.chunk.js":"7f602d87dfd1d81fb3d49a124dc79d685d4f260474dc1946bf68b95709075a5a","/static/js/453.13c722ab.chunk.js.map":"6378d5140ddc861bdb22232d738c5f8a2d647ca0633d4c92aa84c177f357e6ab","/static/js/main.0e2d2308.js.LICENSE.txt":"5801799c775468d00acfe6649b67bdaa758f7cf91965956ef4b9b23894f2b839","/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf":"781ad8cf94713b3586ae61fe948e8b451f62c8b09bc877ec28a47afa22c4d91d","/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2":"45fcbd3ba8ad4babd2ff06ee513469f97a4f2f8e72b80f981f866f4e1078b6e3","/static/media/fa-regular-400.21cb8f55d8e0c5b89751.woff2":"5bc42af8a080aa8dd30e2ee64280fb7644dc612f23641f386bfcd287e7ce3adf","/static/media/fa-regular-400.eb91f7b948a42799f678.ttf":"e3cefda95af8dd0133f5c6b4d8ffda85588cf6123db674d96b46d5663273fb06","/static/css/main.731b433f.css":"5de3fc8537aaca98a6cfb3be4b3bc9fea9f6627b10a94e69102922216d8d4916","/static/media/logo.82d3e68c13f0363a72b6.png":"88a1a17becd11f895c4c63a38b9fa2a41f04ed2514d1e3a0a5c0b00c00d91032","/static/css/main.731b433f.css.map":"05fd5699db298d767bd5fc286f142febf0c305c1753d1b15a6d393c553feb33f","/static/media/fa-brands-400.455ea818179b4def0c43.woff2":"238b6c6d5d9719dd05db12c50495e2c8e8ae6cee16a209876e188fa7530d5eb0","/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2":"7799dbe5b1c68956fc24a4da4beb2aeccb2bd6fb3a4236518973469d87713409","/static/js/main.0e2d2308.js":"f5c2580c00e41b2ab6666e6259332a6208bdccc8c1d8ea574cc5457233282527","/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf":"f965c777877634a06900940fa4ce40edff9b56b3ae08be3b3968ce50ce0ae4b2","/static/media/fa-solid-900.bacd5de623fb563b961a.ttf":"42a1970f708567b43f016bc2025a31048ed1afbc5e061b735a3f7eef62ddf107","/static/media/baleke2.437f8295cc5dee409d54.jpg":"3cf4ff9e5378b339f05635668bfdb75720c64be1763f03693f7a18745a0de0c8","/static/media/baleke3.804f5a4cff82b6a44697.jpg":"d92741763c7f905317f4da9f05537eeefda5d9f7a35318f10e0af833f552cefa","/static/js/main.0e2d2308.js.map":"cc3b519903b6f79aa3a59def3b69c3bb7974548546260000b84d5f0dc42238be","/static/media/baleke4.34b4af575262b5927337.jpg":"6ff1faf3d9b331e44bcbfa95faaabe8e9f2e2695c9c995788da15100819ed17d"}}
+[debug] [2024-05-08T21:52:43.493Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/769013302825/sites/baleke-foundation/versions/1b7ea82802b7c6c4:populateFiles 200
+[debug] [2024-05-08T21:52:43.494Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/769013302825/sites/baleke-foundation/versions/1b7ea82802b7c6c4:populateFiles {"uploadRequiredHashes":["787714f595a3c586560aeb4bdbec645e13a6f27fee8ae1950ae78ca5afab5e14","cc3b519903b6f79aa3a59def3b69c3bb7974548546260000b84d5f0dc42238be","baa7b0d57ebe65eeecb9dbd622490275081dc7686672b3138f8a396453baf83d","f5c2580c00e41b2ab6666e6259332a6208bdccc8c1d8ea574cc5457233282527"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files"}
+[debug] [2024-05-08T21:52:43.495Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/787714f595a3c586560aeb4bdbec645e13a6f27fee8ae1950ae78ca5afab5e14 [none]
+[debug] [2024-05-08T21:52:43.495Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/787714f595a3c586560aeb4bdbec645e13a6f27fee8ae1950ae78ca5afab5e14 [stream]
+[debug] [2024-05-08T21:52:43.496Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/cc3b519903b6f79aa3a59def3b69c3bb7974548546260000b84d5f0dc42238be [none]
+[debug] [2024-05-08T21:52:43.496Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/cc3b519903b6f79aa3a59def3b69c3bb7974548546260000b84d5f0dc42238be [stream]
+[debug] [2024-05-08T21:52:43.497Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/baa7b0d57ebe65eeecb9dbd622490275081dc7686672b3138f8a396453baf83d [none]
+[debug] [2024-05-08T21:52:43.498Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/baa7b0d57ebe65eeecb9dbd622490275081dc7686672b3138f8a396453baf83d [stream]
+[debug] [2024-05-08T21:52:43.498Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/f5c2580c00e41b2ab6666e6259332a6208bdccc8c1d8ea574cc5457233282527 [none]
+[debug] [2024-05-08T21:52:43.498Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/f5c2580c00e41b2ab6666e6259332a6208bdccc8c1d8ea574cc5457233282527 [stream]
+[debug] [2024-05-08T21:52:43.500Z] [hosting][populate queue][FINAL] {"max":7400,"min":7400,"avg":7400,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":7405}
+[debug] [2024-05-08T21:52:43.501Z] [hosting] uploads queued: 4
+[debug] [2024-05-08T21:52:45.544Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/baa7b0d57ebe65eeecb9dbd622490275081dc7686672b3138f8a396453baf83d 200
+[debug] [2024-05-08T21:52:45.544Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/baa7b0d57ebe65eeecb9dbd622490275081dc7686672b3138f8a396453baf83d [stream]
+[debug] [2024-05-08T21:52:45.651Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/787714f595a3c586560aeb4bdbec645e13a6f27fee8ae1950ae78ca5afab5e14 200
+[debug] [2024-05-08T21:52:45.651Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/787714f595a3c586560aeb4bdbec645e13a6f27fee8ae1950ae78ca5afab5e14 [stream]
+[debug] [2024-05-08T21:52:46.361Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/f5c2580c00e41b2ab6666e6259332a6208bdccc8c1d8ea574cc5457233282527 200
+[debug] [2024-05-08T21:52:46.362Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/f5c2580c00e41b2ab6666e6259332a6208bdccc8c1d8ea574cc5457233282527 [stream]
+[debug] [2024-05-08T21:52:46.566Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/cc3b519903b6f79aa3a59def3b69c3bb7974548546260000b84d5f0dc42238be 200
+[debug] [2024-05-08T21:52:46.566Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/baleke-foundation/versions/1b7ea82802b7c6c4/files/cc3b519903b6f79aa3a59def3b69c3bb7974548546260000b84d5f0dc42238be [stream]
+[debug] [2024-05-08T21:52:46.567Z] [hosting][upload queue][FINAL] {"max":3072,"min":2050,"avg":2536.5,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":3073}
+[info] ✔  hosting[baleke-foundation]: file upload complete 
+[debug] [2024-05-08T21:52:46.568Z] [hosting] deploy completed after 10955ms
+[debug] [2024-05-08T21:52:46.569Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "baleke-foundation"
+    },
+    "version": "projects/769013302825/sites/baleke-foundation/versions/1b7ea82802b7c6c4"
+  }
+]
+[info] i  hosting[baleke-foundation]: finalizing version... 
+[debug] [2024-05-08T21:52:46.576Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/baleke-foundation/versions/1b7ea82802b7c6c4 updateMask=status%2Cconfig
+[debug] [2024-05-08T21:52:46.576Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/baleke-foundation/versions/1b7ea82802b7c6c4 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}

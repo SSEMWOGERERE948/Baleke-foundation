@@ -1,0 +1,145 @@
+.navbar {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    top: 60px;
+    left:60%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 50%); /* Adjust width as needed */    
+}
+
+.logo-container {
+    margin-right: 20px; /* Add margin to separate the logo from the navbar items */
+    margin-bottom: 100px;
+  }
+  
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Push items to the ends */
+    margin-left: auto; /* Push the navbar list to the extreme right */
+}
+
+.navbar-item {
+    margin-left: 15px; /* Reduce spacing between links */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+}
+
+.navbar-item:hover .navbar-link {
+    animation: buttonHover 0.3s ease; /* Use the defined animation */
+    background-color: rgba(255, 255, 0, 0.5); /* Faded yellow with 50% opacity */
+  }
+
+.navbar-link{
+    text-decoration: none;
+    color:white;
+    font-size: 16px; /* Decrease font size */
+    font-weight: bold;
+}
+
+.navbar-link.active {
+ color: rgba(255, 255, 0, 0.5); 
+  }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Add transition for smooth visibility change */
+}
+
+  
+.arrow {
+    background-color: white;
+    color: navy;
+    border-radius: 50%; /* Make it a circle */
+    padding: 5px;
+    margin-left: 10px; /* Add spacing between text and arrow */
+}
+
+.donate-button {
+    /* display: flex; */
+    align-items: center; /* Align items vertically */
+    position: absolute;
+    top: 10px;
+    left:55%;
+    margin-left: 71%;
+    transform: translate(-50%, -50%);
+    width: calc(90%); /* Adjust width as needed */   
+}
+
+.donate-card {
+    background-color: transparent;
+    border: 2px solid #c5d500; /* Add orange border */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    padding: 8px 15px; /* Adjust padding for smaller size */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    max-width: 130px; /* Adjust max-width as needed */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+
+  .donate-button:hover .donate-card {
+    animation: buttonHover 0.3s ease; /* Use the defined animation */
+    background-color: rgba(255, 255, 0, 0.5); /* Faded yellow with 50% opacity */
+  }
+
+  .span1 {
+    color: rgba(255, 255, 0, 0.5);
+  }
+
+    
+  
+  .burger-menu {
+    
+   }
+
+  .menu-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+  }
+
+  .burger-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+  }
+  
+  .burger-menu-icon {
+    width: 100%;
+    height: 3px;
+    background-color:blue;
+    right: 40%;
+  }
+  
+  /* Adjust the appearance of the lines as needed */
+  .burger-menu-icon:nth-child(1) {
+    transform: translateY(-2px);
+    /* right: 40%; */
+  }
+  
+  .burger-menu-icon:nth-child(3) {
+    transform: translateY(2px);
+  }
+  
+  

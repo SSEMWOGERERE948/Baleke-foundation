@@ -41,7 +41,11 @@ const Slider = ({ textContent }) => {
   } else if (location.pathname === "/about") {
     title = "About Slider Title";
     description = "This is the description for the About Slider.";
-  } else {
+  } else if (location.pathname === "/contact") {
+    title = "Contact Slider Title";
+    description = "This is the description for the Contact Slider.";
+  }
+   else {
     title = textContent[index]?.title || "";
     description = textContent[index]?.description || "";
   }
